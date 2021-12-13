@@ -1,33 +1,31 @@
 <?php amp_header_core() ?>
- <header class="header container">
-        
+<header class="header container">
+    <div id="search_form_container" class="d-none">
+        <form class="form" action="<?= site_url() ?>" method="GET">
+            <div class="form_container">
+                <input id="search_form" placeholder="Buscar" class="search-form__input" type="search" name="s"
+                    title="Buscar" value="">
+                <button class="search-form__submit" type="submit" title="Buscar" aria-label="Buscar">
+                    <img class="searcher" alt="buscador" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/search_blue.svg">
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="mobile_logo_container">
         <div class="left">
             <?php amp_logo(); ?>
         </div>
-        
-        <div class="right">
-            <?php amp_call_now(); ?>
-            <?php amp_social([
-                'twitter' => 'https://twitter.com/ampforwp',
-                'facebook' => 'https://facebook.com/ampforwp'
-            ]);?>    
-            <?php amp_sidebar(['action'=>'open-button']); ?>         
+
+        <div class="right" id="search_icon">
+            <span>
+                <img class="searcher" alt="buscador" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/search.svg">
+            </span>
         </div>
-        
-        <div class="clearfix"></div>
-    
+    </div>
+
+    <div class="clearfix"></div>
+
 </header>
-
-
-<?php amp_sidebar(['action'=>'start',
-    'id'=>'sidebar',
-    'layout'=>'nodisplay',
-    'side'=>'right'
-] ); ?>
-<?php amp_sidebar(['action'=>'close-button']); ?>
-<?php amp_menu(); ?>
-<?php amp_search();?>
-<?php amp_social(); ?> 
-<?php amp_sidebar(['action'=>'end']); ?>
 
 <div class="content-wrapper container">

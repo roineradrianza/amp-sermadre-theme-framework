@@ -29,4 +29,4 @@ add_amp_theme_support('AMP-related-posts');
 // Post Pagination
 add_amp_theme_support('AMP-post-pagination');
 
-amp_font('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600|Source+Sans+Pro:400,700');
+amp_font('https://fonts.googleapis.com/css?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');

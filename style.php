@@ -1,7 +1,7 @@
 /**** 
 * AMP Framework Reset
 *****/
-    body{ font-family: sans-serif; font-size: 16px; line-height:1.4; }
+    body{ font-family: sans-serif; font-size: 16px; line-height:1.4; background-color: #fcfcfc; }
     ol, ul{ list-style-position: inside }
     p, ol, ul, figure{ margin: 0 0 1em; padding: 0; }
     a, a:active, a:visited{ color:#ed1c24; text-decoration: none }
@@ -52,7 +52,6 @@
         object-fit: contain;
     }
 
-
 /****
 * Container
 *****/
@@ -60,6 +59,17 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 0px 10px;
+}
+
+/****
+* Form inputs
+*****/
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
 
 /****
@@ -133,6 +143,64 @@
 /**** 
 * Header
 *****/
+    .header {
+        background-color: white;
+        box-shadow: 12px -2px 18px 0px rgb(0 0 0 / 20%);
+        
+    }
+    .header .row {
+        display: flex;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .header.container{
+        padding: 20px;
+    }
+    .header .form {
+        width: 300px;
+        display: block;
+    }
+    .header .column {
+        display: flex;
+        poosition: relative;
+        padding: 0% 10% 0% 10%;
+    }
+    .header .form_container {
+        display: flex;
+        background-color: #FFFFFF;
+        border: 0;
+        border-bottom: 1px solid #5FC2EC;
+        min-height: 35px;
+    }
+    .form_container .search-form__input {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: middle;
+        white-space: normal;
+        background: none;
+        line-height: 1;
+        min-width: 0;
+        font-size: 15px;
+        -webkit-appearance: none;
+        padding-left: calc(35px / 3);
+        padding-right: calc(35px / 3);
+        flex-basis: 100%;
+    }
+    .form_container .search-form__input:focus-visible {
+        outline-width: 0;
+    }
+    .form_container .search-form__input, .form_container .search-form__input::placeholder {
+        color: #5FC2EC;
+    }
+    .form_container .search-form__submit{
+        border: none;
+        min-width: calc( 1 * 35px );
+        background-color: #FFF;
+    }
 .amp-logo {
     width:190px;
     height:36px;
@@ -141,7 +209,7 @@
         font-size: 1.5em;
     }
     .header .right{
-        margin: 16px 5px 0px 5px;
+        margin: 10px 5px 0px 5px;
     }
     .amp-phone, .amp-social, .amp-sidebar-button{
         display:inline-flex 
@@ -156,6 +224,9 @@
         top: 6px;
     }
 
+.header .searcher {
+    width: 18px;
+}
 
 /**** 
 * Loop
@@ -257,6 +328,13 @@
         text-align: center;
     }
 
+/****
+* Display helpers
+*****/
+
+.d-none {
+    display: none;
+}
 
 /****
 * RTL Styles

@@ -7,9 +7,15 @@ Version: 0.1
 Author: SerMadre
 Author URI: https://sermadre.com/
 License: GPL2
-AMP: AMP Theme Framework 
+AMP: AMP Tema SerMadre
 */
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+
+define('SERMA_AMP_THEME_FILE', __FILE__);
+define('SERMA_AMP_THEME', dirname(SERMA_AMP_THEME_FILE));
+define('SERMA_AMP_THEME_URL', plugin_dir_url(SERMA_AMP_THEME_FILE));
+
+include SERMA_AMP_THEME . '/enqueue.php';
