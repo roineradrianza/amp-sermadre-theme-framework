@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ahmadawais/sendy-php-api": "^6.0"
+    }
+}
