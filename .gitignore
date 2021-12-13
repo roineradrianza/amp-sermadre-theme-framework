@@ -3,3 +3,8 @@
 *.todo
 *.idea
 *.log
+
+#FOLDERS
+
+config/global.php
+vendor

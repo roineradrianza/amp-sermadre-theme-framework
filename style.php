@@ -1,7 +1,11 @@
 /**** 
 * AMP Framework Reset
 *****/
-    body{ font-family: sans-serif; font-size: 16px; line-height:1.4; background-color: #fcfcfc; }
+    :root {
+        --main-color: #5FC2EC;
+        --text-color: #6A6B7A;
+    }
+    body{ font-family: 'Inter', sans-serif; font-size: 16px; line-height:1.4; background-color: #fcfcfc; }
     ol, ul{ list-style-position: inside }
     p, ol, ul, figure{ margin: 0 0 1em; padding: 0; }
     a, a:active, a:visited{ color:#ed1c24; text-decoration: none }
@@ -59,6 +63,31 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 0px 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+/****
+* flex helpers
+*****/
+
+.justify-center {
+    justify-content: center
+}
+
+.justify-space-between {
+    justify-content: space-between
+}
+
+.justify-space-evenly {
+    justify-content: space-evenly
+}
+
+.align-center {
+    align-items: center
 }
 
 /****
@@ -171,7 +200,7 @@ input[type="search"]::-webkit-search-results-decoration {
         display: flex;
         background-color: #FFFFFF;
         border: 0;
-        border-bottom: 1px solid #5FC2EC;
+        border-bottom: 1px solid var(--main-color);
         min-height: 35px;
     }
     .form_container .search-form__input {
@@ -190,11 +219,11 @@ input[type="search"]::-webkit-search-results-decoration {
         padding-right: calc(35px / 3);
         flex-basis: 100%;
     }
-    .form_container .search-form__input:focus-visible {
+    .header .form_container .search-form__input:focus-visible {
         outline-width: 0;
     }
-    .form_container .search-form__input, .form_container .search-form__input::placeholder {
-        color: #5FC2EC;
+    .header .form_container .search-form__input, .form_container .search-form__input::placeholder {
+        color: var(--main-color);
     }
     .form_container .search-form__submit{
         border: none;
@@ -323,9 +352,76 @@ input[type="search"]::-webkit-search-results-decoration {
 * Footer
 *****/
     .footer{
-        padding: 30px 0px 20px 0px;
-        font-size: 12px;
+        padding: 30px 0px 0px 0px;
+        font-size: 15px;
         text-align: center;
+    }
+
+    .footer .links_section {
+        padding: 0px 15px;
+    }
+
+    .footer .amp-logo {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .footer {
+        color: var(--text-color);
+    }
+
+    .footer h2 {
+        color: black;
+        font-size: 18px;
+    }
+
+    .footer ol li {
+        font-size: 16px;
+        padding-bottom: calc(5px/2);
+    }
+    
+    .footer ol {
+        list-style-type: none;
+    }
+    
+    .footer .copy_footer {
+        background-color: #2D3E48;
+        padding: 20px 15px 7px 15px;
+        color: white;
+    }
+
+    .footer .social-icon {
+        border: 1px solid #8A8A8A;
+        border-radius: 30px 30px 30px 30px;
+        padding: .6em .6em;
+        margin: 0px 15px;
+    }
+    
+    .footer .social-icon img {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    .input_field {
+        background-color: #ffffff;
+        line-height: 1.4;
+        font-size: 15px;
+        min-height: 25px;
+        border: 1px solid #130D0D12;
+        padding: 5px 14px;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .newsletter-form_submit {
+        background-color: var(--main-color);
+        border-radius: 50px 50px 50px 50px;
+        padding: 12px 15px 12px 12px;
+        border: none;
+    }
+
+    .footer .input_field:focus-visible {
+        outline-color: darkgrey;
     }
 
 /****
@@ -334,6 +430,38 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .d-none {
     display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/****
+* Spacing helpers
+*****/
+
+.mt-1 {
+    margin-top: 12px;
+}
+
+.mt-2 {
+    margin-top: 24px;
+}
+
+.mt-3 {
+    margin-top: 36px;
+}
+
+/****
+* Text helpers
+*****/
+
+.text-center {
+    text-align: center;
+}
+
+.font-weight-light {
+    font-weight: 200;
 }
 
 /****
