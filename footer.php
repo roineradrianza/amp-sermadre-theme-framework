@@ -1,39 +1,5 @@
 </div>
-<script>
-let newsletter_form = document.querySelector('#newsletter_form');
-
-window.addEventListener('load', () => {
-    let search_bar_icon = document.querySelector('#search_icon')
-    let search_bar_container = document.querySelector('#search_form_container')
-    let mobile_logo_container = document.querySelector('#mobile_logo_container')
-    let search_form = document.querySelector('#search_form')
-    search_bar_icon.onclick = () => {
-        search_bar_container.classList.remove('d-none')
-        search_bar_container.classList.add('row')
-        mobile_logo_container.classList.add('d-none')
-        search_form.focus()
-    }
-    search_form.onblur = () => {
-        search_bar_container.classList.add('d-none')
-        search_bar_container.classList.remove('row')
-        mobile_logo_container.classList.remove('d-none')
-    }
-})
-
-
-newsletter_form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    let result = subscribeToNewsletter('#newsletter_form')
-})
-
-async function subscribeToNewsletter(form_id) {
-
-    let form_data = new FormData(form_id)
-
-    console.log(form_data)
-
-}
-</script>
+<script src="<?= SERMA_AMP_THEME_URL ?>assets/js/main.min.js?v=1.0.0" target="amp-script"></script>
 <footer class="footer container">
     <div class="links_section">
         <?php amp_logo(); ?>
@@ -108,8 +74,8 @@ async function subscribeToNewsletter(form_id) {
                     </div>
                     <div submit-success>
                         <template type="amp-mustache">
-                            <img src="<?= SERMA_AMP_THEME_URL ?>assets/icons/check.svg"
-                            width="15px"> Gracias por subscribirte a nuestro newsletter!
+                            <img src="<?= SERMA_AMP_THEME_URL ?>assets/icons/check.svg" width="15px"> Gracias por
+                            subscribirte a nuestro newsletter!
                         </template>
                     </div>
                 </div>
@@ -137,6 +103,6 @@ async function subscribeToNewsletter(form_id) {
     </div>
 
     <div class="container copy_footer mt-3">
-        <p class="font-weight-light">Todos los derechos reservados &copy; 2021</p>
+        <p class="font-weight-light white-text">Todos los derechos reservados &copy; 2021</p>
     </div>
 </footer>
