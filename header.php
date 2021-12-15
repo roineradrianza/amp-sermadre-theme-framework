@@ -19,7 +19,7 @@
 
         <div class="right" id="search_icon">
             <span>
-                <img class="searcher" alt="buscador" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/search.svg">
+                <img class="searcher" alt="buscador" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/search-1.svg">
             </span>
         </div>
     </div>

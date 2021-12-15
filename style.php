@@ -197,7 +197,8 @@
         padding: 20px;
     }
     .header .form {
-        width: 300px;
+        width: 80%;
+        padding: 0px 10% 0px 0px;
         display: block;
     }
     .header .column {
@@ -243,11 +244,18 @@
     width:190px;
     height:36px;
 }
+    header.header {
+        position: fixed;
+        width: 100%;
+        max-width: 100vw;
+        top: 0;
+        z-index: 20;
+    }
     .header h1{
         font-size: 1.5em;
     }
     .header .right{
-        margin: 10px 5px 0px 5px;
+        margin: 10px 50px 0px 5px;
     }
     .amp-phone, .amp-social, .amp-sidebar-button{
         display:inline-flex 
