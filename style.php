@@ -1,6 +1,7 @@
 /**** 
 * AMP Framework Reset
 *****/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');
     :root {
         --main-color: #5FC2EC;
         --text-color: #6A6B7A;
@@ -476,6 +477,22 @@
 
 .mt-2 {
     margin-top: 24px;
+}
+
+.mt-3 {
+    margin-top: 36px;
+}
+
+.mt-4 {
+    margin-top: 48px;
+}
+
+.mt-5 {
+    margin-top: 60px;
+}
+
+.mt-6 {
+    margin-top: 72px;
 }
 
 .mb-1 {

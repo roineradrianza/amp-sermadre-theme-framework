@@ -4,8 +4,8 @@
         <div class="mySlides">
             <article class="post-card">
                 <a href="<?= get_permalink($post->ID) ?>" class="thumbnail">
-                    <img src='<?= get_the_post_thumbnail_url( $post->ID )?>' style='width: 100%;'
-                        alt="sally lightfoot crab" />
+                    <amp-img src='<?= get_the_post_thumbnail_url( $post->ID )?>' width="200px" height="150px"
+                        alt="<?= $post->post_title ?>" fallback layout="responsive"></amp-img>
                 </a>
                 <div class="category_container px-1 mb-3">
                     <?php if(!empty($categories = get_the_category($post->ID))) : ?>
@@ -38,12 +38,10 @@
     </div>
 
 </div>
-<br />
-
 
 <div class="dots-container text-center">
     <?php for ($i=0; $i < count($posts); $i++) : ?>
-    <span class="dot" onclick='currentSlide(<?= $i ?>)'></span>
+    <span class="dot" data-slide='<?= $i + 1 ?>'></span>
     <?php endfor ?>
 </div>
 

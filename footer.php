@@ -1,5 +1,6 @@
 </div>
-<script src="<?= SERMA_AMP_THEME_URL ?>assets/js/main.min.js?v=1.0.0" target="amp-script"></script>
+<script async defer src="<?= SERMA_AMP_THEME_URL ?>assets/js/main.min.js?v1.0.5">
+</script>
 <footer class="footer container">
     <div class="links_section">
         <?php amp_logo(); ?>
@@ -57,13 +58,13 @@
         </h2>
         <div class="container">
             <form class="form" action-xhr="<?= site_url() ?>/wp-admin/admin-ajax.php?action=serma_sendy_subscribe"
-                id="newsletter_form" method="POST">
+                id="newsletter_form" method="POST" target="_top">
                 <div class="form_container">
                     <input type="hidden" name="url_referrer" title="<?= get_permalink() ?>">
                     <input class="input_field" type="email" name="email" title="Correo electrónico">
                     <button class="newsletter-form_submit" type="submit" title="Subscribirme" aria-label="Subscribirme">
-                        <img alt="subscribirme" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/paper-plane.svg"
-                            width="16px">
+                        <amp-img alt="subscribirme" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/paper-plane.svg"
+                            width="16px" height="18px"></amp-img>
                     </button>
                     <div class="container mt-1">
                         <input type="checkbox" name="tos_accepted" required="required" aria-required="true">
@@ -74,7 +75,7 @@
                     </div>
                     <div submit-success>
                         <template type="amp-mustache">
-                            <img src="<?= SERMA_AMP_THEME_URL ?>assets/icons/check.svg" width="15px"> Gracias por
+                            Gracias por
                             subscribirte a nuestro newsletter!
                         </template>
                     </div>
@@ -87,17 +88,17 @@
         </h2>
         <div class="row justify-center align-center">
             <a class="social-icon d-flex align-center" href="https://www.facebook.com/sermadrela/" target="_blank">
-                <img alt="facebook" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/facebook.svg" target="_blank">
+                <img alt="facebook" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/facebook.svg">
             </a>
-            <a class="social-icon d-flex align-center" href="">
-                <img alt="twitter" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/twitter.svg" target="_blank">
+            <a class="social-icon d-flex align-center" href="" target="_blank">
+                <img alt="twitter" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/twitter.svg">
             </a>
             <a class="social-icon d-flex align-center" href="" target="_blank">
                 <img alt="google+" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/google-plus-g.svg">
             </a>
             <a class="social-icon d-flex align-center" href="https://www.instagram.com/sermadreoficial/?hl=es"
                 target="_blank">
-                <img alt="instagram" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/instagram.svg" target="_blank">
+                <img alt="instagram" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/instagram.svg">
             </a>
         </div>
     </div>

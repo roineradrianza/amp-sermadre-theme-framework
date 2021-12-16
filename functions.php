@@ -63,5 +63,3 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
-amp_font('https://fonts.googleapis.com/css?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');

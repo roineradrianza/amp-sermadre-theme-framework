@@ -1,7 +1,7 @@
 <?php require SERMA_AMP_THEME . '/Classes/Template.php'?>
 
 <?php amp_header()?>
-<div class="d-flex mb-1 mt-2">
+<div class="d-flex mb-1" style="margin-top: 150px;">
     <?=SERMA_AMP_TEMPLATE::load_template('post/categories', ['categories' => get_the_category(get_the_ID())])?>
 </div>
 <?php amp_title()?>

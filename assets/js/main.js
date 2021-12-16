@@ -1,3 +1,5 @@
+
+
 var slideIndex = 1;
 
 var myTimer;
@@ -31,8 +33,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
+    var slides = document.querySelectorAll(".mySlides");
+    var dots = document.querySelectorAll(".dot");
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
@@ -54,65 +56,76 @@ resume = () => {
     myTimer = setInterval(function () { plusSlides(slideIndex) }, 4000);
 };
 
+showSlides(slideIndex);
+myTimer = setInterval(function () { plusSlides(1) }, 4000);
+
+//COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+//UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+// slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+slideshowContainer.addEventListener('mouseenter', pause)
+slideshowContainer.addEventListener('mouseleave', resume)
+
+let dots = document.querySelectorAll('.dot')
+dots.forEach((e, i) => {
+    dots[i].onclick = () => {
+        currentSlide(i + 1)
+    }
+})
+
 window.addEventListener('load', () => {
+
+    let social_buttons = document.querySelectorAll('[data-social-link]')
+    let social_container = document.querySelector('.social-container')
+
+    if (social_container != null) {
+        window.addEventListener('scroll', () => {
+            var social_container_parent = social_container.parentElement
+            if (social_container_parent.offsetTop - 700 < window.scrollY) {
+                social_container.classList.remove('sticky')
+            } else {
+                social_container.classList.add('sticky')
+            }
+        })
+    }
+
     let search_bar_icon = document.querySelector('#search_icon')
     let search_bar_container = document.querySelector('#search_form_container')
     let mobile_logo_container = document.querySelector('#mobile_logo_container')
     let search_form = document.querySelector('#search_form')
-    search_bar_icon.onclick = () => {
+
+    search_bar_icon.addEventListener('click', () => {
         search_bar_container.classList.remove('d-none')
         search_bar_container.classList.add('row')
         mobile_logo_container.classList.add('d-none')
         search_form.focus()
-    };
-    search_form.onblur = () => {
+    });
+
+    search_form.addEventListener('blur', () => {
         search_bar_container.classList.add('d-none')
         search_bar_container.classList.remove('row')
         mobile_logo_container.classList.remove('d-none')
-    };
-    showSlides(slideIndex);
-    myTimer = setInterval(function () { plusSlides(1) }, 4000);
+    })
 
-    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
-
-    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
-
-    slideshowContainer.addEventListener('mouseenter', pause)
-    slideshowContainer.addEventListener('mouseleave', resume)
-})
-
-let social_buttons = document.querySelectorAll('[social-link]')
-let social_container = document.querySelector('.social-container')
-
-if (social_container != null) {
-    window.addEventListener('scroll', () => {
-        var social_container_parent = social_container.parentElement
-        if (social_container_parent.offsetTop - 700 < window.scrollY) {
-            social_container.classList.remove('sticky')
-        } else {
-            social_container.classList.add('sticky')
+    social_buttons.forEach((e, i) => {
+        social_buttons[i].onclick = () => {
+            console.log(i)
+            let url = e.getAttribute('data-social-link')
+            openNewTab({
+                url: url,
+                params: `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+    width=0,height=0,left=-1000,top=-1000`
+            })
         }
     })
-}
 
-social_buttons.forEach((e, i) => {
-    social_buttons[i].onclick = () => {
-        console.log(i)
-        let url = e.getAttribute('social-link')
-        openNewTab({
-            url: url,
-            params: `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=0,height=0,left=-1000,top=-1000`
-        })
+    function openNewTab({
+        url = '',
+        title = '',
+        params = ''
+    }) {
+        window.open(url, title, params);
     }
 })
-
-function openNewTab({
-    url = '',
-    title = '',
-    params = ''
-}) {
-    window.open(url, title, params);
-}
