@@ -46,7 +46,7 @@ function serma_related_posts() {
         'category__in'   => $cat_ids,
         'post_type'      => $current_post_type,
         'post__not_in'    => array($post_id),
-        'posts_per_page'  => '4',
+        'posts_per_page'  => '2',
      );
 
     return get_posts( $query_args );
@@ -63,3 +63,4 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+amp_font('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');

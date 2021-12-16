@@ -1,7 +1,6 @@
 /**** 
 * AMP Framework Reset
 *****/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');
     :root {
         --main-color: #5FC2EC;
         --text-color: #6A6B7A;
@@ -523,6 +522,14 @@
     padding: 0px 12px;
 }
 
+.px-2 {
+    padding: 0px 24px;
+}
+
+.px-3 {
+    padding: 0px 36px;
+}
+
 .pb-1 {
     padding-bottom: 12px;
 }
@@ -668,70 +675,16 @@ a.single-post-category {
     color: var(--main-color);
 }
 
-/****
-* Slider Styles
-*****/
-
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto
-}
-
-.mySlides {
-    display: none;
-    transform: translateX(-150%);
-    -webkit-animation: slide 0.5s forwards;
-    animation: slide 0.5s forwards;
-}
-
-@-webkit-keyframes slide {
-    100% { transform: translateX(0); }
-}
-
-@keyframes slide {
-    100% { transform: translateX(0); }
-}
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #222428
-}
-
-.dot {
-    cursor: pointer;
-    width: 20px;
-    height: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    margin: 0 2px;
-    background-color: #bbb;
-    display: inline-block;
-    transition: all .5s;
-}
-
-.active,
-.dot:hover {
-    width: 45px;
-    transition: all .5s;
-    background-color: #5FC2EC;
-}
-
-.mySlides .post-card {
+.related-posts .post-card {
     background-color: white;
     border-radius: 15px;
     box-shadw: 2px 2px 30px -15px rgb(95 194 236 / 35%);
 }
-.mySlides .post-card .thumbnail img {
+.related-posts .post-card .thumbnail img {
     border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
 }
+
 /****
 * RTL Styles
 *****/

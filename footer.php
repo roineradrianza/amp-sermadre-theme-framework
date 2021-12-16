@@ -1,6 +1,4 @@
 </div>
-<script async defer src="<?= SERMA_AMP_THEME_URL ?>assets/js/main.min.js?v1.0.5">
-</script>
 <footer class="footer container">
     <div class="links_section">
         <?php amp_logo(); ?>
@@ -88,17 +86,17 @@
         </h2>
         <div class="row justify-center align-center">
             <a class="social-icon d-flex align-center" href="https://www.facebook.com/sermadrela/" target="_blank">
-                <img alt="facebook" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/facebook.svg">
+                <amp-img alt="facebook" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/facebook.svg" width="18px" height="18px"></amp-img>
             </a>
             <a class="social-icon d-flex align-center" href="" target="_blank">
-                <img alt="twitter" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/twitter.svg">
+                <amp-img alt="twitter" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/twitter.svg" width="18px" height="18px"></amp-img>
             </a>
             <a class="social-icon d-flex align-center" href="" target="_blank">
-                <img alt="google+" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/google-plus-g.svg">
+                <amp-img alt="google+" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/google-plus-g.svg" width="18px" height="18px"></amp-img>
             </a>
             <a class="social-icon d-flex align-center" href="https://www.instagram.com/sermadreoficial/?hl=es"
                 target="_blank">
-                <img alt="instagram" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/instagram.svg">
+                <amp-img alt="instagram" src="<?= SERMA_AMP_THEME_URL ?>assets/icons/brands/instagram.svg" width="18px" height="18px"></amp-img>
             </a>
         </div>
     </div>
