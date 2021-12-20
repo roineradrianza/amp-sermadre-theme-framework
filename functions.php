@@ -2,32 +2,51 @@
 // Loading the Components
 //Search
 add_amp_theme_support('AMP-search');
+
 //Logo
 add_amp_theme_support('AMP-logo');
+
 //Social Icons
 add_amp_theme_support('AMP-social-icons');
+
 //Menu
 add_amp_theme_support('AMP-menu');
+
 //Call Now
 add_amp_theme_support('AMP-call-now');
+
 //Sidebar
 add_amp_theme_support('AMP-sidebar');
+
 // Featured Image
 add_amp_theme_support('AMP-featured-image');
+
 //Author box
 add_amp_theme_support('AMP-author-box');
+
 //Loop
 add_amp_theme_support('AMP-loop');
+
 // Categories and Tags list
 add_amp_theme_support('AMP-categories-tags');
+
 // Comments
 add_amp_theme_support('AMP-comments');
+
 //Post Navigation
 add_amp_theme_support('AMP-post-navigation');
+
 // Related Posts
 add_amp_theme_support('AMP-related-posts');
+
 // Post Pagination
 add_amp_theme_support('AMP-post-pagination');
+
+//Breadcrumb
+add_amp_theme_support('AMP-breadcrumb');
+
+// Categories and Tags list
+add_amp_theme_support('AMP-categories-tags');
 
 function serma_related_posts() {
     $post_id = get_the_ID();
@@ -61,9 +80,6 @@ function serma_related_posts() {
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
-
-//Breadcrumb
-add_amp_theme_support('AMP-breadcrumb');
 
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 amp_font('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');

@@ -697,6 +697,20 @@ a.single-post-category {
     content: '/ ';
 }
 
+span.amp-tag a {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid #130D0D12;
+    border-radius: 20px;
+    margin: 0px 10px 10px 0px;
+}
+
+span.amp-tag a:hover {
+    border: 1px solid #5FC2EC;
+    transition: border 1s;
+}
+
 /****
 * RTL Styles
 *****/

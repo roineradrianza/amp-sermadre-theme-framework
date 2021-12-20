@@ -15,8 +15,10 @@
 </div>
 <?php amp_featured_image()?>
 <?php amp_content()?>
-<?php amp_post_pagination()?>
 <?php amp_author_box()?>
+<div class="mt-3">
+    <?php amp_tags_list(' ')?>
+</div>
 <?=SERMA_AMP_TEMPLATE::load_template('related-posts', ['posts' => serma_related_posts()])?>
 <?=SERMA_AMP_TEMPLATE::load_template('post/social-media', ['title' => get_the_title(), 'url' => get_permalink()])?>
 <div class="mb-3"></div>
