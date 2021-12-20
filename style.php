@@ -685,6 +685,18 @@ a.single-post-category {
     object-fit: cover;
 }
 
+.breadcrumbs a {
+    color: var(--heading-color);
+}
+
+.breadcrumbs a:hover {
+    color: var(--main-color);
+}
+
+.breadcrumbs span span:before {
+    content: '/ ';
+}
+
 /****
 * RTL Styles
 *****/
