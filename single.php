@@ -22,9 +22,5 @@
 <?=SERMA_AMP_TEMPLATE::load_template('related-posts', ['posts' => serma_related_posts()])?>
 <?=SERMA_AMP_TEMPLATE::load_template('post/social-media', ['title' => get_the_title(), 'url' => get_permalink()])?>
 <div class="mb-3"></div>
-<div class="px-2">
-    <?=SERMA_AMP_TEMPLATE::load_template('newsletter', ['referrer_url' => get_permalink()])?>
-</div>
-<div class="mb-2"></div>
 <?php amp_footer()?>
 <div class="mb-3"></div>

@@ -1,3 +1,7 @@
+## V1.2.1
+1. Newsletter disabled
+2. Table of Contents layout updated
+
 ## V1.2
 1. POST TAGS ADDED
 
