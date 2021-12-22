@@ -2,7 +2,7 @@
 * AMP Framework Reset
 *****/
     :root {
-        --main-color: #5FC2EC;
+        --main-color: #62CEF9;
         --text-color: #6A6B7A;
         --heading-color: #2D3E48;
     }
@@ -557,8 +557,16 @@
     color: var(--heading-color);
 }
 
+.black--text {
+    color: #000;
+}
+
 .white-text {
     color: #fff;
+}
+
+.font-weight-regular {
+    font-weight: 500;
 }
 
 /****
@@ -697,6 +705,15 @@ a.single-post-category {
 
 #toc_container a:hover {
     color: var(--main-color);
+}
+
+.author-avatar {
+    border-radius: 100%;
+}
+.author-container {
+    border-radius: 10px;
+    border: 1px solid #D4D5DA;
+    padding: 20px 30px;
 }
 
 .related-posts .post-card {

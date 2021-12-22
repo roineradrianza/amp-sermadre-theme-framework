@@ -1,6 +1,9 @@
+## V1.3.0
+1. AUTHOR PROFILE DETAILS ADDED 
+
 ## V1.2.1
-1. Newsletter disabled
-2. Table of Contents layout updated
+1. NEWSLETTER DISABLED
+2. TABLE OF CONTENTS LAYOUT UPDATED
 
 ## V1.2
 1. POST TAGS ADDED

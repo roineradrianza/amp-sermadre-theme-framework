@@ -2,7 +2,7 @@
 
 <?php amp_header()?>
 <div style="margin-top: 130px;">
-    <?php amp_breadcrumb(); ?>
+    <?php amp_breadcrumb();?>
 </div>
 
 <div class="d-flex mt-2" style="">
@@ -15,7 +15,21 @@
 </div>
 <?php amp_featured_image()?>
 <?php amp_content()?>
-<?php amp_author_box()?>
+<?=SERMA_AMP_TEMPLATE::load_template('post/author-profile', [
+        'avatar' => get_avatar($post->post_author, 96, '', '', 
+            [
+                'class' => 'author-avatar'
+            ]
+        ),
+        'meta' => [
+            'ID' => $post->post_author,
+            'first_name' => get_the_author_meta('first_name', $post->post_author),
+            'last_name' => get_the_author_meta('last_name', $post->post_author),
+            'bio' => get_the_author_meta('description', $post->post_author),
+            'serma_job_title' => get_the_author_meta('serma_job_title', $post->post_author),
+        ]
+    ]
+)?>
 <div class="mt-3">
     <?php amp_tags_list(' ')?>
 </div>
