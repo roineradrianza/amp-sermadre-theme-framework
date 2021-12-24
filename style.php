@@ -244,18 +244,11 @@
     width:190px;
     height:36px;
 }
-    header.header {
-        position: fixed;
-        width: 100%;
-        max-width: 100vw;
-        top: 0;
-        z-index: 20;
-    }
     .header h1{
         font-size: 1.5em;
     }
     .header .right{
-        margin: 10px 50px 0px 5px;
+        margin: 10px 0px 0px 5px;
     }
     .amp-phone, .amp-social, .amp-sidebar-button{
         display:inline-flex 
@@ -750,6 +743,15 @@ span.amp-tag a {
 span.amp-tag a:hover {
     border: 1px solid #5FC2EC;
     transition: border 1s;
+}
+
+/****
+* ADS Styles
+*****/
+
+.amp-ad-wrapper.amp_ad_5 {
+    display: flex;
+    justify-content: center;
 }
 
 /****
