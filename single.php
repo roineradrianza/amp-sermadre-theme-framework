@@ -24,5 +24,6 @@
 <?=SERMA_AMP_TEMPLATE::load_template('related-posts', ['posts' => serma_related_posts()])?>
 <?=SERMA_AMP_TEMPLATE::load_template('post/social-media', ['title' => get_the_title(), 'url' => get_permalink()])?>
 <div class="mb-3"></div>
+<?php if( function_exists('the_ad_placement') ) { the_ad_placement('depues-de-publicaciones-relacionadas'); } ?>
 <?php amp_footer()?>
 <div class="mb-3"></div>
