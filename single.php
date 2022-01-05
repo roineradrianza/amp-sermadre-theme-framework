@@ -26,4 +26,16 @@
 <div class="mb-3"></div>
 <?php if( function_exists('the_ad_placement') ) { the_ad_placement('depues-de-publicaciones-relacionadas'); } ?>
 <?php amp_footer()?>
+<amp-analytics type="gtag" data-credentials="include">
+<script type="application/json">
+{
+  "vars" : {
+    "gtag_id": "UA-116579575-1",
+    "config" : {
+      "UA-116579575-1": { "groups": "default" }
+    }
+  }
+}
+</script>
+</amp-analytics>
 <div class="mb-3"></div>
